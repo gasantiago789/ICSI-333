@@ -1,9 +1,16 @@
 //
+//  ICSI 333. Programming at the Hardware-Software Interface
+//  SEMESTER: FALL 2019
+//  LAB SECTION: FRI 1:40PM
+//  NAME: Gabriel Santiago
+//  UA ID: 001316068
+//
+//
 //  BattleshipProject1.c
 //
 //  Created by Gabriel Santiago on 9/25/19.
 //  Copyright © 2019 Gabriel Santiago. All rights reserved.
-//
+
 
 
 #include <stdio.h>
