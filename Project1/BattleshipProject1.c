@@ -10,14 +10,15 @@
 //
 //  Created by Gabriel Santiago on 9/25/19.
 //  Copyright © 2019 Gabriel Santiago. All rights reserved.
-
+//
+//  BsattleshipProject1 is the first part of the game. It will take users input and set a hit
+//  or miss depending on the values entered. If the number is even and the letter is a vowerl then
+//  you have hit a boat.
+//
 
 
 #include <stdio.h>
 #include <ctype.h>
-
-
-
 
 //Part 1
 //Function type char pointer will set the string to empty and return it to the main
@@ -36,6 +37,14 @@ char * init()
 
 //Part2
 //Function will recieve the letter and number type pointer and set it as the input
+
+/*
+ /  Function will recieve the letter and number type pointer and set it as the input
+ /
+ /  @param letter The letter that the user will input
+ /  @param number The number the user will input
+ /
+ */
 void acceptInput(char* letter, int* number)
 {
     //User input
@@ -70,9 +79,15 @@ void acceptInput(char* letter, int* number)
 
 //Part 3
 /*
-/ Will update state of world, if user input is a vowel and a even number
-/ then it will set the world as a "Hit". If it does not meet this criteria then the world
-/ will be set as a "Miss". It will also return this
+/   Will update state of world, if user input is a vowel and a even number
+/   then it will set the world as a "Hit". If it does not meet this criteria then the world
+/   will be set as a "Miss". It will also return this
+/
+/   @param *world It is the world type pointer that will be modified
+/   @param number Previous input number
+/   @param letter Previous input letter
+/
+/   @return world Returns the news state of the world
 */
 char * updateStateOfWorld(char *world, int number, char letter)
 {
@@ -93,7 +108,11 @@ char * updateStateOfWorld(char *world, int number, char letter)
 }
 
 //Part 4
-//Will display the state of the world
+/*
+ /  Will display the state of the world
+ /
+ /  @param *world State of world that will be displayed
+ */
 void displayState(char* world)
 {
     printf("%s\n", world);
@@ -109,10 +128,17 @@ void termination()
 //Main funciton
 int main()
 {
+    //Declaration of variables that will store values
     int number;
     char letter;
+    
+    //Recieves and sets the world to empty for later modification
     char *world = init();
+    
+    //Flag that will be used for further conditionals
     int flag = 1;
+    
+    //Choice that user will input character for later conditionals
     char choice;
     
     //Part 6
